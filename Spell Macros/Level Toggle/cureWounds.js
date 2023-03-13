@@ -91,7 +91,6 @@ const castSpell = () => {
             </div>
           </form>
         `,
-    //select element type
     buttons: {
       yes: {
         icon: '<i class="fas fa-bolt"></i>',
@@ -113,7 +112,7 @@ const castSpell = () => {
               speaker: { alias: token.document.name },
             });
             console.log(roll._total);
-            //--token.document._actor.system.spells[`spell${spellLevel}`].value;
+            --token.document._actor.system.spells[`spell${spellLevel}`].value;
 
             game.user.targets.forEach((i, t) => {
               addHp(roll._total, i.document._actor);
